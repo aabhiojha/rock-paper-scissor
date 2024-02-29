@@ -33,7 +33,7 @@ function whoWon(computer_choice, user_choice) {
     result.textContent = "Scissor beats paper";
     userCounter++;
     result.style.color = 'green';
-  } else if (computer_choice === "rock" && user_choice === "scissor") {
+  } else if (computer_choice === "scissor" && user_choice === "rock") {
     result.textContent = "Rock beats scissor";
     userCounter++;
     result.style.color = 'green';
@@ -47,11 +47,12 @@ function whoWon(computer_choice, user_choice) {
     result.textContent = "Scissor beats paper";
     computerCounter++;
     result.style.color = 'red';
-  } else if (computer_choice === "scissor" && user_choice === "rock") {
+  } else if (computer_choice === "rock" && user_choice === "scissor") {
     result.textContent = "Rock beats scissor";
     computerCounter++;
     result.style.color = 'red';
   }
+
   document.querySelector(".computer-score").textContent = computerCounter;
   document.querySelector(".user-score").textContent = userCounter;
 }
